@@ -1,0 +1,75 @@
+// CSS
+.nav {
+  width:1000px;
+  height:81,5px;
+  display:flex;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 46%, rgba(0,212,255,1) 100%);
+  border: solid 5px rgb(168, 231, 244);
+  box-shadow: 0px 0px 50px 10px rgb(168, 231, 244);
+  margin-left: 10%;
+}
+.nav .link {
+  position:relative;
+  flex:1;
+  line-height:70px;
+  text-align:center;
+}
+.nav .link a {
+  position:relative;
+  color:#ffffff;
+  font-size:20px;
+  display: block;
+  border: rgb(168, 231, 244);
+  text-decoration:none;
+  z-index:2;
+}
+.nav .link:before {
+  content:"";
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:0%;
+  background:rgb(248, 139, 36);
+  z-index:-1;
+  transition: 300ms;
+}
+.nav .link:after {
+  content:"";
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:0%;
+  background:rgb(248, 139, 36);
+  transition: 300ms;
+}
+.nav .link:hover {
+  cursor:pointer;
+}
+.nav .link:hover:before {
+  height:100%;
+  filter:blur(30px);
+}
+.nav .link:hover:after {
+  height:100%;
+}
+
+// HTML
+
+ <div class="nav">
+                <div class="link">
+                  <a href="index.html">Kezdőoldal</a>
+                </div>
+                <div class="link">
+                  <a href="hattersory.html">Háttér story</a>
+                </div>
+                <div class="link">
+                  <a href="#">Gameplay</a>
+                </div>
+                <div class="link">
+                  <a href="#">About</a>
+                </div>
+              </div>
+
